@@ -312,7 +312,6 @@ open class ICBaseView<View: CellableView, Cell: ViewHostingCell<View>, Settings:
         // decoration
         layout.registerDecorationViews([
             Settings.DateHeaderBackground.self,
-            Settings.TimeHeaderBackground.self,
             Settings.AllDayHeaderBackground.self
         ])
         layout.register(ICGridLine.self, forDecorationViewOfKind: ICViewKinds.Decoration.verticalGridline)

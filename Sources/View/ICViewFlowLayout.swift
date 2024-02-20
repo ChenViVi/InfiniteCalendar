@@ -195,8 +195,6 @@ open class ICViewFlowLayout<Settings: ICSettings>: UICollectionViewFlowLayout {
             return minOverlayZ + (isHiddenTopDate ? 12 : 7)
         case Settings.DateHeaderBackground.className:
             return minOverlayZ + 6
-        case Settings.TimeHeaderBackground.className:
-            return minOverlayZ + 4
         case Settings.Timeline.className:
             return minOverlayZ + 3
         case ICViewKinds.Decoration.horizontalGridline:

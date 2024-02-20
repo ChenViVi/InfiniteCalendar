@@ -21,7 +21,7 @@ public protocol ICAllDayHeaderView: ICComponentView where Item == ICAllDayHeader
 public protocol ICAllDayCornerView: ICComponentView where Item == ICAllDayCornerItem {}
 public protocol ICTimelineView: ICComponentView where Item == ICTimelineItem {}
 
-public protocol ICTimeHeaderBackgroundView: ICComponentView where Item == ICContentBackgroundItem {}
+
 public protocol ICDateHeaderBackgroundView: ICComponentView where Item == ICContentBackgroundItem {}
 public protocol ICAllDayHeaderBackgroundView: ICComponentView where Item == ICContentBackgroundItem {}
 
@@ -35,6 +35,5 @@ open class ICAllDayHeader<T:ICAllDayHeaderView>: ViewHostingSupplementaryCell<T>
 open class ICAllDayCorner<T:ICAllDayCornerView>: ViewHostingSupplementaryCell<T> {}
 open class ICTimeline<T:ICTimelineView>: ViewHostingSupplementaryCell<T> {}
 
-open class ICTimeHeaderBackground<T:ICTimeHeaderBackgroundView>: ViewHostingDecorationCell<T> {}
 open class ICDateHeaderBackground<T:ICDateHeaderBackgroundView>: ViewHostingDecorationCell<T> {}
 open class ICAllDayHeaderBackground<T:ICAllDayHeaderBackgroundView>: ViewHostingDecorationCell<T> {}

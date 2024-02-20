@@ -21,8 +21,6 @@ public protocol ICSettings: ObservableObject {
     associatedtype Timeline: ICTimeline<TimelineView>               = ICDefaultComponent.Timeline
     
     // ViewHostableDecorationCells
-    associatedtype TimeHeaderBackgroundView: ICTimeHeaderBackgroundView                         = ICDefaultComponent.D_TimeHeaderBackgroundView
-    associatedtype TimeHeaderBackground: ICTimeHeaderBackground<TimeHeaderBackgroundView>       = ICDefaultComponent.TimeHeaderBackground
     associatedtype DateHeaderBackgroundView: ICDateHeaderBackgroundView                         = ICDefaultComponent.D_DateHeaderBackgroundView
     associatedtype DateHeaderBackground: ICDateHeaderBackground<DateHeaderBackgroundView>       = ICDefaultComponent.DateHeaderBackground
     associatedtype AllDayHeaderBackgroundView: ICAllDayHeaderBackgroundView                     = ICDefaultComponent.D_AllDayHeaderBackgroundView

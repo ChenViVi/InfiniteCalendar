@@ -19,7 +19,6 @@
 		099CB4EF283B809A00D96142 /* ICDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4BC283B809A00D96142 /* ICDesignSystem.swift */; };
 		099CB4F2283B809A00D96142 /* ICComponentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C1283B809A00D96142 /* ICComponentItem.swift */; };
 		099CB4F3283B809A00D96142 /* ICDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C2283B809A00D96142 /* ICDateHeader.swift */; };
-		099CB4F4283B809A00D96142 /* ICTimeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C3283B809A00D96142 /* ICTimeHeader.swift */; };
 		099CB4F5283B809A00D96142 /* ICGridLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C4283B809A00D96142 /* ICGridLine.swift */; };
 		099CB4F6283B809A00D96142 /* ICTimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C5283B809A00D96142 /* ICTimeline.swift */; };
 		099CB4F7283B809A00D96142 /* ICAllDayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C6283B809A00D96142 /* ICAllDayHeader.swift */; };
@@ -90,7 +89,6 @@
 		099CB4BC283B809A00D96142 /* ICDesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDesignSystem.swift; sourceTree = "<group>"; };
 		099CB4C1283B809A00D96142 /* ICComponentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICComponentItem.swift; sourceTree = "<group>"; };
 		099CB4C2283B809A00D96142 /* ICDateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDateHeader.swift; sourceTree = "<group>"; };
-		099CB4C3283B809A00D96142 /* ICTimeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTimeHeader.swift; sourceTree = "<group>"; };
 		099CB4C4283B809A00D96142 /* ICGridLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICGridLine.swift; sourceTree = "<group>"; };
 		099CB4C5283B809A00D96142 /* ICTimeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTimeline.swift; sourceTree = "<group>"; };
 		099CB4C6283B809A00D96142 /* ICAllDayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICAllDayHeader.swift; sourceTree = "<group>"; };
@@ -304,7 +302,6 @@
 		09DB5DBB2843688C00F78715 /* DefaultComponents */ = {
 			isa = PBXGroup;
 			children = (
-				099CB4C3283B809A00D96142 /* ICTimeHeader.swift */,
 				099CB4C2283B809A00D96142 /* ICDateHeader.swift */,
 				099CB4C6283B809A00D96142 /* ICAllDayHeader.swift */,
 				099CB4C5283B809A00D96142 /* ICTimeline.swift */,
@@ -435,7 +432,6 @@
 				099CB4F6283B809A00D96142 /* ICTimeline.swift in Sources */,
 				099CB4F9283B809A00D96142 /* ViewHostingDecorationCell.swift in Sources */,
 				099CB4F5283B809A00D96142 /* ICGridLine.swift in Sources */,
-				099CB4F4283B809A00D96142 /* ICTimeHeader.swift in Sources */,
 				099CB505283B809A00D96142 /* ICCollectionView.swift in Sources */,
 				099CB4ED283B809A00D96142 /* WeakTimer.swift in Sources */,
 				099CB4F8283B809A00D96142 /* ViewHostingSupplementaryCell.swift in Sources */,
