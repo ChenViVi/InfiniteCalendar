@@ -24,7 +24,7 @@ struct ContentView: View {
     @State var targetDate: Date?
     @State var selectedItem: EventCellView.VM?
     
-    @ObservedObject var settings: CustomSettings = CustomSettings(numOfDays: 1, setDate: Date())
+    @ObservedObject var settings: CustomSettings = CustomSettings()
     
     
     var body: some View {
