@@ -17,8 +17,6 @@
 		099CB4ED283B809A00D96142 /* WeakTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4BA283B809A00D96142 /* WeakTimer.swift */; };
 		099CB4EE283B809A00D96142 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4BB283B809A00D96142 /* Extensions.swift */; };
 		099CB4EF283B809A00D96142 /* ICDesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4BC283B809A00D96142 /* ICDesignSystem.swift */; };
-		099CB4F0283B809A00D96142 /* ScrollViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4BE283B809A00D96142 /* ScrollViewAnimator.swift */; };
-		099CB4F1283B809A00D96142 /* ScrollTimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4BF283B809A00D96142 /* ScrollTimingFunction.swift */; };
 		099CB4F2283B809A00D96142 /* ICComponentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C1283B809A00D96142 /* ICComponentItem.swift */; };
 		099CB4F3283B809A00D96142 /* ICDateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C2283B809A00D96142 /* ICDateHeader.swift */; };
 		099CB4F4283B809A00D96142 /* ICTimeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4C3283B809A00D96142 /* ICTimeHeader.swift */; };
@@ -90,8 +88,6 @@
 		099CB4BA283B809A00D96142 /* WeakTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakTimer.swift; sourceTree = "<group>"; };
 		099CB4BB283B809A00D96142 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		099CB4BC283B809A00D96142 /* ICDesignSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDesignSystem.swift; sourceTree = "<group>"; };
-		099CB4BE283B809A00D96142 /* ScrollViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewAnimator.swift; sourceTree = "<group>"; };
-		099CB4BF283B809A00D96142 /* ScrollTimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollTimingFunction.swift; sourceTree = "<group>"; };
 		099CB4C1283B809A00D96142 /* ICComponentItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICComponentItem.swift; sourceTree = "<group>"; };
 		099CB4C2283B809A00D96142 /* ICDateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICDateHeader.swift; sourceTree = "<group>"; };
 		099CB4C3283B809A00D96142 /* ICTimeHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICTimeHeader.swift; sourceTree = "<group>"; };
@@ -181,7 +177,6 @@
 			children = (
 				099CB4B2283B809A00D96142 /* DataSource */,
 				099CB4B7283B809A00D96142 /* Util */,
-				099CB4BD283B809A00D96142 /* Animation */,
 				099CB4C0283B809A00D96142 /* Component */,
 				099CB4CB283B809A00D96142 /* Delegate */,
 				099CB4CE283B809A00D96142 /* Protocol */,
@@ -211,15 +206,6 @@
 				099CB4BC283B809A00D96142 /* ICDesignSystem.swift */,
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		099CB4BD283B809A00D96142 /* Animation */ = {
-			isa = PBXGroup;
-			children = (
-				099CB4BE283B809A00D96142 /* ScrollViewAnimator.swift */,
-				099CB4BF283B809A00D96142 /* ScrollTimingFunction.swift */,
-			);
-			path = Animation;
 			sourceTree = "<group>";
 		};
 		099CB4C0283B809A00D96142 /* Component */ = {
@@ -456,8 +442,6 @@
 				099CB4EF283B809A00D96142 /* ICDesignSystem.swift in Sources */,
 				099CB506283B809A00D96142 /* ICViewController.swift in Sources */,
 				099CB500283B809A00D96142 /* Buildable.swift in Sources */,
-				099CB4F0283B809A00D96142 /* ScrollViewAnimator.swift in Sources */,
-				099CB4F1283B809A00D96142 /* ScrollTimingFunction.swift in Sources */,
 				099CB4EA283B809A00D96142 /* ICDataProvider.swift in Sources */,
 				099CB503283B809A00D96142 /* ICView.swift in Sources */,
 				099CB4FC283B809A00D96142 /* ICBaseViewDelegate.swift in Sources */,

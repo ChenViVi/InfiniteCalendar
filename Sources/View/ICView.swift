@@ -99,9 +99,9 @@ open class ICView<View: CellableView, Cell: ViewHostingCell<View>, Settings: ICS
             currentEditingCellInfo!.highlightPath = (highlightIndexPath, nil)
         }
         
-        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 5.0, options: .curveEaseOut) {
-            self.dataSource?.hightlightTimeHeader(self.currentEditingCellInfo?.highlightPath)
-        } completion: { _ in }
+//        UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 5.0, options: .curveEaseOut) {
+//            self.dataSource?.hightlightTimeHeader(self.currentEditingCellInfo?.highlightPath)
+//        } completion: { _ in }
     }
     
     // MARK: - Gesture
@@ -230,7 +230,7 @@ open class ICView<View: CellableView, Cell: ViewHostingCell<View>, Settings: ICS
         
         UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 5.0, options: .curveEaseOut) {
             self.longTapView!.transform = CGAffineTransform.identity
-            self.dataSource?.hightlightTimeHeader(self.currentEditingCellInfo?.highlightPath)
+            //self.dataSource?.hightlightTimeHeader(self.currentEditingCellInfo?.highlightPath)
         } completion: { _ in
             // Prepare autoScrollTimer to start AutoScroll on `handleLongTapChanged()`
             self.autoScrollTimer?.invalidate()
@@ -316,7 +316,7 @@ open class ICView<View: CellableView, Cell: ViewHostingCell<View>, Settings: ICS
         }
         
         longTapView?.removeFromSuperview()
-        dataSource?.hightlightTimeHeader(nil)
+        //dataSource?.hightlightTimeHeader(nil)
         
         if settings.withVibrateFeedback {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred(intensity: 0.8)

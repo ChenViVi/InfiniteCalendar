@@ -38,9 +38,6 @@ open class ICDataSource<View: CellableView, Cell: ViewHostingCell<View>, Setting
     
     weak var delegate: ICDataSourceDelegate?
     
-    /// Hightlight
-    private var hightlighted: ICView.HightlightIndex?
-    
     public init(parentVC: UIViewController, collectionView: UICollectionView, provider: ICDataProvider<View, Cell, Settings>) {
         self.parentVC = parentVC
         self.collectionView = collectionView
@@ -65,32 +62,6 @@ open class ICDataSource<View: CellableView, Cell: ViewHostingCell<View>, Setting
         provider.events = events
     }
     
-    open func hightlightTimeHeader(_ hightlightIndex: ICView.HightlightIndex?) {
-        // off current hightlight if needed
-        if hightlightIndex?.0 != hightlighted?.0 {
-            updateHighlight(item: hightlighted?.0?.item, isOn: false)
-            updateHighlight(item: hightlightIndex?.0?.item, isOn: true)
-            vibrateFeedback?.impactOccurred(intensity: 0.4)
-        }
-        if hightlightIndex?.1 != hightlighted?.1 {
-            updateHighlight(item: hightlighted?.1?.item, isOn: false)
-            updateHighlight(item: hightlightIndex?.1?.item, isOn: true)
-            vibrateFeedback?.impactOccurred(intensity: 0.4)
-        }
-        
-        hightlighted = hightlightIndex
-    }
-    
-    open func updateHighlight(item: Int?, isOn: Bool) {
-        guard let i = item else { return }
-        if let timeHeader = self.collectionView.supplementaryView(forElementKind: Settings.TimeHeader.className, at: IndexPath(item: i, section: 0)) as? Settings.TimeHeader {
-            if var item = timeHeader.item {
-                item.isHighlighted = isOn
-                timeHeader.configure(parentVC: parentVC, item: item)
-            }
-        }
-    }
-    
     open func allDayHeaderViews(allDayVM: [View.VM]) -> [AnyView] {
         var allDayViews = [AnyView]()
         let itemVerticalMargin: CGFloat = 1.0
@@ -111,14 +82,6 @@ open class ICDataSource<View: CellableView, Cell: ViewHostingCell<View>, Setting
     open func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         var view = UICollectionReusableView()
         switch kind {
-        case Settings.TimeHeader.className:
-            if let timeHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kind, for: indexPath) as? Settings.TimeHeader {
-                let date = provider.layout.date(forTimeHeaderAt: indexPath)
-                let range = (provider.settings.timeRange.startTime...provider.settings.timeRange.endTime)
-                let item = ICTimeHeaderItem(date: date, isDisplayed: range.contains(date.hour))
-                timeHeader.configure(parentVC: parentVC, item: item)
-                view = timeHeader
-            }
         case Settings.DateHeader.className:
             if let dateHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kind, for: indexPath) as? Settings.DateHeader {
                 let date = provider.layout.date(forTimeHeaderAt: indexPath)

@@ -9,8 +9,6 @@ import SwiftUI
 
 public protocol ICSettings: ObservableObject {
     // ViewHostableSupplementaryCells
-    associatedtype TimeHeaderView: ICTimeHeaderView                 = ICDefaultComponent.D_TimeHeaderView
-    associatedtype TimeHeader: ICTimeHeader<TimeHeaderView>         = ICDefaultComponent.TimeHeader
     associatedtype DateHeaderView: ICDateHeaderView                 = ICDefaultComponent.D_DateHeaderView
     associatedtype DateHeader: ICDateHeader<DateHeaderView>         = ICDefaultComponent.DateHeader
     associatedtype DateCornerView: ICDateCornerView                 = ICDefaultComponent.D_DateCornerView

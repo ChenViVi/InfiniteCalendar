@@ -15,7 +15,6 @@ public protocol ICComponentView: View {
     init(_ item: Item)
 }
 
-public protocol ICTimeHeaderView: ICComponentView where Item == ICTimeHeaderItem {}
 public protocol ICDateHeaderView: ICComponentView where Item == ICDateHeaderItem {}
 public protocol ICDateCornerView: ICComponentView where Item == ICContentBackgroundItem {}
 public protocol ICAllDayHeaderView: ICComponentView where Item == ICAllDayHeaderItem {}
@@ -30,7 +29,6 @@ public protocol ICAllDayHeaderBackgroundView: ICComponentView where Item == ICCo
 public class ICDefaultComponent {}
 
 // When create custom component, inherit those classes
-open class ICTimeHeader<T:ICTimeHeaderView>: ViewHostingSupplementaryCell<T> {}
 open class ICDateHeader<T:ICDateHeaderView>: ViewHostingSupplementaryCell<T> {}
 open class ICDateCorner<T:ICDateCornerView>: ViewHostingSupplementaryCell<T> {}
 open class ICAllDayHeader<T:ICAllDayHeaderView>: ViewHostingSupplementaryCell<T> {}

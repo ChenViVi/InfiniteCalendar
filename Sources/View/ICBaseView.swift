@@ -226,10 +226,10 @@ open class ICBaseView<View: CellableView, Cell: ViewHostingCell<View>, Settings:
     open func forceReload() {
         DispatchQueue.main.async {
             if let targetOffset = self.destinationOffset {
-                self.collectionView.setContentOffset(targetOffset.0, velocity: targetOffset.1, timingFunction: .quadOut) { [weak self] in
-                    guard let strongSelf = self else { return }
-                    strongSelf.endOfScroll()
-                }
+//                self.collectionView.setContentOffset(targetOffset.0, velocity: targetOffset.1, timingFunction: .quadOut) { [weak self] in
+//                    guard let strongSelf = self else { return }
+//                    strongSelf.endOfScroll()
+//                }
             } else {
                 let paging = PagingDirection(self.collectionView)
                 let velocity = (paging.scrollingTo == .stay) ? .zero : CGPoint(x: paging.scrollingTo == .next ? 1 : -1, y: 0)
@@ -302,7 +302,6 @@ open class ICBaseView<View: CellableView, Cell: ViewHostingCell<View>, Settings:
     open func registerViewClasses() {
         // supplementary
         collectionView.registerSupplementaryViews([
-            Settings.TimeHeader.self,
             Settings.DateHeader.self,
             Settings.DateCorner.self,
             Settings.AllDayHeader.self,
@@ -356,10 +355,10 @@ open class ICBaseView<View: CellableView, Cell: ViewHostingCell<View>, Settings:
         // handle the situation scrollViewDidEndDragging not being called
         if !decelerate {
             let duration: TimeInterval = (scrollType == .pageScroll) ? 0.3 : 0.15
-            scrollView.setContentOffset(getNearestDestinationOffset(scrollView).0, duration: duration, timingFunction: .quadOut) { [weak self] in
-                guard let strongSelf = self else { return }
-                strongSelf.endOfScroll()
-            }
+//            scrollView.setContentOffset(getNearestDestinationOffset(scrollView).0, duration: duration, timingFunction: .quadOut) { [weak self] in
+//                guard let strongSelf = self else { return }
+//                strongSelf.endOfScroll()
+//            }
         }
 
         // Wait 0.3 sec for make sure scroll is done

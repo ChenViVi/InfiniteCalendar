@@ -171,7 +171,7 @@ open class ICViewFlowLayout<Settings: ICSettings>: UICollectionViewFlowLayout {
         var attributes = UICollectionViewLayoutAttributes()
         let contentMinX = timeHeaderWidth + contentsMargin.left
         let contentMinY = contentsMargin.top + (isHiddenTopDate ? 0 : dateHeaderHeight)
-        layoutTimeHeaderAttributes(collectionView: cv, attributes: &attributes)
+        //layoutTimeHeaderAttributes(collectionView: cv, attributes: &attributes)
         
         // reset DateHeader with verticalGridLine
         layoutCurrentTimelineAttributes(sectionIndexes: sectionIndexes, collectionView: cv, attributes: &attributes)
@@ -195,8 +195,6 @@ open class ICViewFlowLayout<Settings: ICSettings>: UICollectionViewFlowLayout {
             return minOverlayZ + (isHiddenTopDate ? 12 : 7)
         case Settings.DateHeaderBackground.className:
             return minOverlayZ + 6
-        case Settings.TimeHeader.className:
-            return minOverlayZ + 5
         case Settings.TimeHeaderBackground.className:
             return minOverlayZ + 4
         case Settings.Timeline.className:
@@ -475,25 +473,6 @@ open class ICViewFlowLayout<Settings: ICSettings>: UICollectionViewFlowLayout {
         - collectionView: self CollectionView
         - attributes: the pointer of attributes
      */
-    open func layoutTimeHeaderAttributes(collectionView: UICollectionView, attributes: inout UICollectionViewLayoutAttributes) {
-        let indexPaths: [IndexPath] = indexPathsForTimeHeader()
-        indexPaths.forEach { indexPath in
-            (attributes, timeHeaderAttributes) = layoutAttributesForSupplementaryView(at: indexPath, ofKind: Settings.TimeHeader.className, withItemCache: timeHeaderAttributes)
-            let date = date(forTimeHeaderAt: indexPath)
-            attributes.frame = rect(collectionView, forTimeHeaderAt: date, isLast: (indexPaths.last == indexPath))
-            attributes.zIndex = zIndexForElementKind(Settings.TimeHeader.className)
-        }
-        
-        // background
-        (attributes, timeHeaderBackgroundAttributes) = layoutAttributesForDecorationView(at: IndexPath(item: 0, section: 0), ofKind: Settings.TimeHeaderBackground.className, withItemCache: timeHeaderBackgroundAttributes)
-        attributes.frame = CGRect(
-            x: fmax(collectionView.contentOffset.x, 0),
-            y: collectionView.contentOffset.y,
-            width: timeHeaderWidth,
-            height: collectionView.frame.height + (safeAreaInsets?.top ?? 0) + (safeAreaInsets?.bottom ?? 0)
-        )
-        attributes.zIndex = zIndexForElementKind(Settings.TimeHeaderBackground.className)
-    }
     
     open func layoutCurrentTimelineAttributes(sectionIndexes: NSIndexSet, collectionView: UICollectionView, attributes: inout UICollectionViewLayoutAttributes) {
         let calendarMinX = timeHeaderWidth + contentsMargin.left
