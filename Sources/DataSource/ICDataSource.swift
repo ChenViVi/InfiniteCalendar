@@ -64,18 +64,6 @@ open class ICDataSource<View: CellableView, Cell: ViewHostingCell<View>, Setting
         provider.events = events
     }
     
-
-    
-    open func updateHighlight(item: Int?, isOn: Bool) {
-        guard let i = item else { return }
-        if let timeHeader = self.collectionView.supplementaryView(forElementKind: Settings.TimeHeader.className, at: IndexPath(item: i, section: 0)) as? Settings.TimeHeader {
-            if var item = timeHeader.item {
-                item.isHighlighted = isOn
-                timeHeader.configure(parentVC: parentVC, item: item)
-            }
-        }
-    }
-    
     open func allDayHeaderViews(allDayVM: [View.VM]) -> [AnyView] {
         var allDayViews = [AnyView]()
         let itemVerticalMargin: CGFloat = 1.0
