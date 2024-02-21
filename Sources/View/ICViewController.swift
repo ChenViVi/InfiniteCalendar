@@ -9,7 +9,7 @@ import SwiftUI
 
 open class ICViewController<View: CellableView, Cell: ViewHostingCell<View>, Settings: ICSettings>: UIViewController {
     
-    public var calendarView: ICView<View,Cell,Settings>!
+    public var calendarView: ICBaseView<View,Cell,Settings>!
     public var currentNumOfDays: Int = 0
     
     private var isUpdated: Bool = false
@@ -24,7 +24,7 @@ open class ICViewController<View: CellableView, Cell: ViewHostingCell<View>, Set
     }
     
     open func setupCalendarView(events: [View.VM], settings: Settings) {
-        calendarView = ICView(parentViewController: self)
+        calendarView = ICBaseView(parentViewController: self)
         calendarView.setupCalendar(events: events, settings: settings)
         currentNumOfDays = settings.numOfDays
         self.view = calendarView
@@ -41,7 +41,6 @@ open class ICViewController<View: CellableView, Cell: ViewHostingCell<View>, Set
     
     public func setDelegate(_ delegate: ICViewDelegate<View,Cell,Settings>) {
         calendarView.delegate = delegate /// base delegate
-        calendarView.delegateForLongTap = delegate
     }
     
     public func updateCalendar(events: [View.VM], settings: Settings, targetDate: Date?) {

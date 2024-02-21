@@ -36,7 +36,6 @@
 		099CB500283B809A00D96142 /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4D2283B809A00D96142 /* Buildable.swift */; };
 		099CB501283B809A00D96142 /* ViewHostableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4D3283B809A00D96142 /* ViewHostableCell.swift */; };
 		099CB502283B809A00D96142 /* ICBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4D5283B809A00D96142 /* ICBaseView.swift */; };
-		099CB503283B809A00D96142 /* ICView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4D6283B809A00D96142 /* ICView.swift */; };
 		099CB504283B809A00D96142 /* InfiniteCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4D7283B809A00D96142 /* InfiniteCalendar.swift */; };
 		099CB505283B809A00D96142 /* ICCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4D8283B809A00D96142 /* ICCollectionView.swift */; };
 		099CB506283B809A00D96142 /* ICViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099CB4D9283B809A00D96142 /* ICViewController.swift */; };
@@ -109,7 +108,6 @@
 		099CB4D2283B809A00D96142 /* Buildable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buildable.swift; sourceTree = "<group>"; };
 		099CB4D3283B809A00D96142 /* ViewHostableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHostableCell.swift; sourceTree = "<group>"; };
 		099CB4D5283B809A00D96142 /* ICBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICBaseView.swift; sourceTree = "<group>"; };
-		099CB4D6283B809A00D96142 /* ICView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICView.swift; sourceTree = "<group>"; };
 		099CB4D7283B809A00D96142 /* InfiniteCalendar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteCalendar.swift; sourceTree = "<group>"; };
 		099CB4D8283B809A00D96142 /* ICCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICCollectionView.swift; sourceTree = "<group>"; };
 		099CB4D9283B809A00D96142 /* ICViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ICViewController.swift; sourceTree = "<group>"; };
@@ -268,7 +266,6 @@
 			isa = PBXGroup;
 			children = (
 				099CB4D5283B809A00D96142 /* ICBaseView.swift */,
-				099CB4D6283B809A00D96142 /* ICView.swift */,
 				099CB4D7283B809A00D96142 /* InfiniteCalendar.swift */,
 				099CB4D8283B809A00D96142 /* ICCollectionView.swift */,
 				099CB4D9283B809A00D96142 /* ICViewController.swift */,
@@ -459,7 +456,6 @@
 				099CB4F0283B809A00D96142 /* ScrollViewAnimator.swift in Sources */,
 				099CB4F1283B809A00D96142 /* ScrollTimingFunction.swift in Sources */,
 				099CB4EA283B809A00D96142 /* ICDataProvider.swift in Sources */,
-				099CB503283B809A00D96142 /* ICView.swift in Sources */,
 				099CB4FC283B809A00D96142 /* ICBaseViewDelegate.swift in Sources */,
 				099CB4F3283B809A00D96142 /* ICDateHeader.swift in Sources */,
 				099CB4F2283B809A00D96142 /* ICComponentItem.swift in Sources */,

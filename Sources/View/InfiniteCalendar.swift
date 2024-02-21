@@ -68,15 +68,15 @@ public struct InfiniteCalendar<View: CellableView, Cell: ViewHostingCell<View>, 
             var onEventCanceled: ((View.VM) -> Void)?
             
             
-            func icView(_ icView: ICView<View, Cell, Settings>, didAdd event: View.VM, startAt startDate: Date, endAt endDate: Date) {
+            func icView(_ icView: ICBaseView<View, Cell, Settings>, didAdd event: View.VM, startAt startDate: Date, endAt endDate: Date) {
                 self.onEventAdded?(event)
             }
             
-            func icView(_ icView: ICView<View, Cell, Settings>, didMove event: View.VM, startAt startDate: Date, endAt endDate: Date) {
+            func icView(_ icView: ICBaseView<View, Cell, Settings>, didMove event: View.VM, startAt startDate: Date, endAt endDate: Date) {
                 self.onEventMoved?(event)
             }
             
-            func icView(_ icView: ICView<View, Cell, Settings>, didCancel event: View.VM, startAt startDate: Date, endAt endDate: Date) {
+            func icView(_ icView: ICBaseView<View, Cell, Settings>, didCancel event: View.VM, startAt startDate: Date, endAt endDate: Date) {
                 self.onEventCanceled?(event)
             }
             

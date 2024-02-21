@@ -224,19 +224,19 @@ open class ICBaseView<View: CellableView, Cell: ViewHostingCell<View>, Settings:
     }
     
     open func forceReload() {
-        DispatchQueue.main.async {
-            if let targetOffset = self.destinationOffset {
-                self.collectionView.setContentOffset(targetOffset.0, velocity: targetOffset.1, timingFunction: .quadOut) { [weak self] in
-                    guard let strongSelf = self else { return }
-                    strongSelf.endOfScroll()
-                }
-            } else {
-                let paging = PagingDirection(self.collectionView)
-                let velocity = (paging.scrollingTo == .stay) ? .zero : CGPoint(x: paging.scrollingTo == .next ? 1 : -1, y: 0)
-                self.getPointeeResetedPagingOffset(self.collectionView, withVelocity: velocity)
-                self.endOfScroll()
-            }
-        }
+//        DispatchQueue.main.async {
+//            if let targetOffset = self.destinationOffset {
+//                self.collectionView.setContentOffset(targetOffset.0, velocity: targetOffset.1, timingFunction: .quadOut) { [weak self] in
+//                    guard let strongSelf = self else { return }
+//                    strongSelf.endOfScroll()
+//                }
+//            } else {
+//                let paging = PagingDirection(self.collectionView)
+//                let velocity = (paging.scrollingTo == .stay) ? .zero : CGPoint(x: paging.scrollingTo == .next ? 1 : -1, y: 0)
+//                self.getPointeeResetedPagingOffset(self.collectionView, withVelocity: velocity)
+//                self.endOfScroll()
+//            }
+//        }
     }
     
     
