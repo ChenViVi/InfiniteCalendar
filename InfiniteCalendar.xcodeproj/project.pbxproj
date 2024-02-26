@@ -179,14 +179,14 @@
 		099CB4B1283B809A00D96142 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				099CB4B2283B809A00D96142 /* DataSource */,
-				099CB4B7283B809A00D96142 /* Util */,
 				099CB4BD283B809A00D96142 /* Animation */,
 				099CB4C0283B809A00D96142 /* Component */,
+				099CB4B2283B809A00D96142 /* DataSource */,
 				099CB4CB283B809A00D96142 /* Delegate */,
-				099CB4CE283B809A00D96142 /* Protocol */,
-				099CB4D4283B809A00D96142 /* View */,
 				099CB4DB283B809A00D96142 /* Header */,
+				099CB4CE283B809A00D96142 /* Protocol */,
+				099CB4B7283B809A00D96142 /* Util */,
+				099CB4D4283B809A00D96142 /* View */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
